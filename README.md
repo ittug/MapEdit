@@ -19,4 +19,5 @@
 <br>５．右側の上部にある追加をクリックする。</br>
 <br>６．右側の追加されたものを、ダブルクリックor詳細をクリックすることで初期値の変更ができるようになる。
 
-https://user-images.githubusercontent.com/41132047/42761450-8cb9d000-8948-11e8-9973-99b26a2921f1.gif
+![default](https://user-images.githubusercontent.com/41132047/42761450-8cb9d000-8948-11e8-9973-99b26a2921f1.gif)
+
