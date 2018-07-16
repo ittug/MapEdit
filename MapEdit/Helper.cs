@@ -91,7 +91,12 @@ namespace MapEdit
 			//文字列に変換する
 			return relativeUri.ToString();
 		}
-
+		/// <summary>
+		/// listbox のアイテムの入れ替え
+		/// </summary>
+		/// <param name="list"></param>
+		/// <param name="index1"></param>
+		/// <param name="index2"></param>
 		public static void SwapListBoxData(ListBox list, int index1, int index2)
 		{
 			var tmp = list.Items[index1];
@@ -108,6 +113,12 @@ namespace MapEdit
 		{
 			return Enum.GetName(typeof(Type), t);
 		}
+		/// <summary>
+		/// int から対象の enum 型に変換
+		/// </summary>
+		/// <typeparam name="Type"></typeparam>
+		/// <param name="num"></param>
+		/// <returns></returns>
 		public static Type GetIntToEnum<Type>(int num)
 		{
 			return (Type)Enum.ToObject(typeof(Type), num);
@@ -132,15 +143,29 @@ namespace MapEdit
 		{
 			return (target & cond).To0or1();
 		}
-
+		/// <summary>
+		/// bool から int 辺変換
+		/// </summary>
+		/// <param name="b"></param>
+		/// <returns>b が true なら 1,false なら 0</returns>
 		public static int ToInt(this bool b)
 		{
 			return b ? 1 : 0;
 		}
+		/// <summary>
+		/// 引数を 0 or 1 に変換する
+		/// </summary>
+		/// <param name="i"></param>
+		/// <returns>i が 0 なら 0,それ以外なら 1 を返す</returns>
 		public static int To0or1(this int i)
 		{
 			return i == 0 ? 0 : 1;
 		}
+		/// <summary>
+		/// int 型を bool に変換
+		/// </summary>
+		/// <param name="i"></param>
+		/// <returns></returns>
 		public static bool ToBool(this int i)
 		{
 			return i == 0 ? false : true;
